@@ -1,0 +1,7 @@
+<openerp>
+    <data>
+        <!-- PARKING/MENU -->
+        <!-- PRICING --> 		       
+        <menuitem id="park_pricing_menu" name="Pricing" parent="base.park_master_menu"  action="action_park_pricing" groups="base.group_parking_manager" sequence="1"/>
+    </data>
+</openerp>

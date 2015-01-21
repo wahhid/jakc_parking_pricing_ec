@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<openerp>
+    <data>
+        <!-- PARK/PRICING -->
+		
+        <record model="ir.ui.view" id="view_park_pricing_form">
+            <field name="name">park.pricing.form</field>
+            <field name="model">park.pricing</field>						
+            <field name="type">form</field>						
+            <field name="arch" type="xml">
+                <form string="Pricing" version="7.0">
+                	<sheet>
+	                    <group>                            
+	                        <field name="name"/>          
+	                        <field name="vehicle_type_id"/>          
+	                        <field name="limit_time_charge"/>          
+	                        <field name="first_hours_charge"/>          
+	                        <field name="second_hours_charge"/>
+	                        <field name="third_hours_charge"/>
+	                        <field name="next_hours_charge"/>        
+	                        <field name="service_charge"/>
+	                        <field name="pinalty_charge"/>
+	                        <field name="is_voucher_allowed"/>
+	                        <field name="state"/>          
+	                    </group>	                		                	
+                	</sheet>  
+                </form>
+            </field>
+        </record>
+		
+        <record model="ir.ui.view" id="view_park_pricing_tree">
+            <field name="name">park.pricing.tree</field>
+            <field name="model">park.pricing</field>			
+            <field name="type">tree</field>						
+            <field name="arch" type="xml">
+                <tree string="Pricing">
+                    <field name="name"/>
+                    <field name="vehicle_type_id"/>		
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+                                                
+        <!-- PARK/ACTION -->
+        <!-- PRICING -->
+		<record model="ir.actions.act_window" id="action_park_pricing">
+            <field name="name">Pricing</field>
+            <field name="res_model">park.pricing</field>
+            <field name="view_mode">tree,form</field>
+        </record>		
+                                                                                                                                                                                                                                                                                                	
+    </data>                
+</openerp>
